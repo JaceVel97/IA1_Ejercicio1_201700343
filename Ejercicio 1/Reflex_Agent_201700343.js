@@ -97,12 +97,5 @@ function analyze_case(counter_case){
   }
 }
 
-function analyze_case_2(counter_case){
-  if((counter_case.get("1") >= 1) && (counter_case.get("2") >= 1) && (counter_case.get("3") >= 1) && (counter_case.get("4") >= 1) 
-  && (counter_case.get("5") >= 1) && (counter_case.get("6") >= 1) && (counter_case.get("7") >= 1) && (counter_case.get("8") >= 1)){
-    clearTimeout(time);
-  }
-}
-
 var states = ["A","DIRTY","DIRTY"];
 initial(states);
