@@ -1,0 +1,92 @@
+body{
+    background-color:  #2980b9 ;
+    font-size: 18px;
+}
+
+.centerd {
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+}
+
+/*Estilos de las tablas**/
+
+.table-wrapper{
+    margin: 5px 150px 10px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 15px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/*Estilos del card de operaciones**/
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+    margin: 5px 25px 5px;
+    transition: 0.3s;
+    background-color: white;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    overflow-y: scroll;
+    height: 308px;
+  }
+
+  .column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="styles.css" rel="stylesheet" type="text/css">
         <title>Aspiradora 201700343</title>
     </head>
     <body>
-        <p id="result"></p>
-        <p id= "log"></p>
+        <h2>Ejercicio 1 -- Aspiradora</h2>
+        <div class="row">
+            <div class="table-wrapper column">
+                <h2>Tabla de conteo de casos</h2>
+                <table class="fl-table">
+                    <thead>
+                    <tr>
+                        <th>Nombre del caso</th>
+                        <th>Conteo</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Caso 1=> Aspiradora: A, Estado A: Sucio, Estado B: Sucio</td>
+                        <td id="case1_c">0</td>
+                    </tr>
+                    <tr>
+                        <td>Caso 2 => Aspiradora: B, Estado A: Sucio, Estado B: Sucio</td>
+                        <td id="case2_c">0</td>
+                    </tr>
+                    <tr>
+                        <td>Caso 3 => Aspiradora: A, Estado A: Sucio, Estado B: Limpio</td>
+                        <td id="case3_c">0</td>
+                    </tr>
+                    <tr>
+                        <td>Caso 4 => Aspiradora: B, Estado A: Sucio, Estado B: Limpio</td>
+                        <td id="case4_c">0</td>
+                    </tr>
+                    <tr>
+                        <td>Caso 5 => Aspiradora: A, Estado A: Limpio, Estado B: Sucio</td>
+                        <td id="case5_c">0</td>
+                    </tr>
+                    <tr>
+                        <td>Caso 6 => Aspiradora: B, Estado A: Limpio, Estado B: Sucio</td>
+                        <td id="case6_c">0</td>
+                    </tr>
+                    <tr>
+                        <td>Caso 7 => Aspiradora: A, Estado A: Limpio, Estado B: Limpio</td>
+                        <td id="case7_c">0</td>
+                    </tr>
+                    <tr>
+                        <td>Caso 8 => Aspiradora: B, Estado A: Limpio, Estado B: Limpio</td>
+                        <td id="case8_c">0</td>
+                    </tr>
+                     <tbody>
+                </table>
+            </div>
+            
+            <div class="centerd column">
+                <h2>Operaciones</h2>
+                <div class="card">
+                    <div class="container">
+                        <p id= "log"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <script type="text/javascript" src="Reflex_Agent_201700343.js"></script>
     </body>
 </html>
