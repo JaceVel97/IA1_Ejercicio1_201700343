@@ -15,6 +15,8 @@ function initial(states){
   counter_case.set("6",0);
   counter_case.set("7",0);
   counter_case.set("8",0);
+  
+  counter_case = count_cases(states, counter_case);
 
   test(states, counter_case, counter_operations)
 
@@ -26,12 +28,11 @@ function test(states, counter_case, counter_operations){
 
       counter_operations++;
 
-      counter_case = count_cases(states, counter_case);
-
       var action_result = reflex_agent(location, state);
       states = getDirty(states);
       document.getElementById("log").innerHTML+="<br>".concat(counter_operations).concat(") Location: ").concat(location).concat(" | Action: ").concat(action_result);
-      
+      counter_case = count_cases(states, counter_case);
+
       if (action_result == "CLEAN"){
         if (location == "A") states[1] = "CLEAN";
         else if (location == "B") states[2] = "CLEAN";
@@ -45,34 +46,42 @@ function count_cases(states, counter_case){
   if((states[0] == "A") && (states[1] == "DIRTY") && (states[2] == "DIRTY")){
     counter_case.set("1", (counter_case.get("1") + 1));
     document.getElementById("case1_c").innerHTML=counter_case.get("1");
+    document.getElementById("picture").src = "Ejercicio 1/1_1.png";
   }
   else if((states[0] == "B") && (states[1] == "DIRTY") && (states[2] == "DIRTY")){
     counter_case.set("2", (counter_case.get("2") + 1));
     document.getElementById("case2_c").innerHTML=counter_case.get("2");
+    document.getElementById("picture").src = "Ejercicio 1/1_2.png";
   }
   else if((states[0] == "A") && (states[1] == "DIRTY") && (states[2] == "CLEAN")){
     counter_case.set("3", (counter_case.get("3") + 1));
     document.getElementById("case3_c").innerHTML=counter_case.get("3");
+    document.getElementById("picture").src = "Ejercicio 1/1_3.png";
   }
   else if((states[0] == "B") && (states[1] == "DIRTY") && (states[2] == "CLEAN")){
     counter_case.set("4", (counter_case.get("4") + 1));
     document.getElementById("case4_c").innerHTML=counter_case.get("4");
+    document.getElementById("picture").src = "Ejercicio 1/1_4.png";
   }
   else if((states[0] == "A") && (states[1] == "CLEAN") && (states[2] == "DIRTY")){
     counter_case.set("5", (counter_case.get("5") + 1));
     document.getElementById("case5_c").innerHTML=counter_case.get("5");
+    document.getElementById("picture").src = "Ejercicio 1/1_5.png";
   }
   else if((states[0] == "B") && (states[1] == "CLEAN") && (states[2] == "DIRTY")){
     counter_case.set("6", (counter_case.get("6") + 1));
     document.getElementById("case6_c").innerHTML=counter_case.get("6");
+    document.getElementById("picture").src = "Ejercicio 1/1_6.png";
   }
   else if((states[0] == "A") && (states[1] == "CLEAN") && (states[2] == "CLEAN")){
     counter_case.set("7", (counter_case.get("7") + 1));
     document.getElementById("case7_c").innerHTML=counter_case.get("7");
+    document.getElementById("picture").src = "Ejercicio 1/1_7.png";
   }
   else if((states[0] == "B") && (states[1] == "CLEAN") && (states[2] == "CLEAN")){
     counter_case.set("8", (counter_case.get("8") + 1));
     document.getElementById("case8_c").innerHTML=counter_case.get("8");
+    document.getElementById("picture").src = "Ejercicio 1/1_8.png";
   }
   return counter_case;
 }
@@ -83,16 +92,20 @@ function getDirty(states){
   if(option == 2){
     if(states[1] == "CLEAN" && states[2]=="DIRTY"){
       states[1] = "DIRTY";
+      document.getElementById("log").innerHTML+="<br><b>-- Location: ".concat("A").concat(" | Action: ").concat("DIRTY").concat("</b>");
     }
     else if(states[1] == "DIRTY" && states[2]=="CLEAN"){
       states[2] = "DIRTY";
+      document.getElementById("log").innerHTML+="<br><b>-- Location: ".concat("B").concat(" | Action: ").concat("DIRTY").concat("</b>");
     }
     else if(states[1] == "CLEAN" && states[2]=="CLEAN"){
       if(state_option == 1){
         states[1] = "DIRTY";
+        document.getElementById("log").innerHTML+="<br><b>-- Location: ".concat("A").concat(" | Action: ").concat("DIRTY").concat("</b>");
       }
       else if(state_option == 2){
         states[2] = "DIRTY";
+        document.getElementById("log").innerHTML+="<br><b>-- Location: ".concat("B").concat(" | Action: ").concat("DIRTY").concat("</b>");
       }
     }
     return states;

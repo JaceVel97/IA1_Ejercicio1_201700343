@@ -58,22 +58,18 @@ h2{
     background: #F8F8F8;
 }
 
-/*Estilos del card de operaciones**/
 
 .card {
-    /* Add shadows to create the "card" effect */
     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
     margin: 5px 25px 5px;
     transition: 0.3s;
     background-color: white;
   }
   
-  /* On mouse-over, add a deeper shadow */
   .card:hover {
     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
   }
   
-  /* Add some padding inside the card container */
   .container {
     overflow-y: scroll;
     height: 308px;
@@ -84,9 +80,15 @@ h2{
   width: 33.33%;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
+}
+
+/*Estilo de la imagen**/
+img {
+    margin-left: 41.7%;
+    margin-right: 41.7%;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
 }
