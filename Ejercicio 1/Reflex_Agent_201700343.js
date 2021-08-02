@@ -15,8 +15,6 @@ function initial(states){
   counter_case.set("6",0);
   counter_case.set("7",0);
   counter_case.set("8",0);
-  
-  counter_case = count_cases(states, counter_case);
 
   test(states, counter_case, counter_operations)
 
